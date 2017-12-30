@@ -41,7 +41,9 @@ gib_list *filelist = NULL;
 gib_list *original_file_items = NULL; /* original file items from argv */
 int filelist_len = 0;
 gib_list *current_file = NULL;
+#ifdef HAVE_LIBPTHREAD
 gib_list *next_file = NULL;
+#endif
 extern int errno;
 
 static gib_list *rm_filelist = NULL;
